@@ -32,18 +32,16 @@
       "node"
     ],
     "outDir": "dist",
-    "rootDir": "src",
     "tsBuildInfoFile": "dist/tsconfig.tsbuildinfo"
   },
   "include": [
-    "../dist/frontend/.next/types/**/*.ts",
-    "../frontend/.next/types/**/*.ts",
+    ".next/types/**/*.ts",
     "next-env.d.ts",
     "src/**/*.js",
     "src/**/*.jsx",
     "src/**/*.ts",
     "src/**/*.tsx",
-    ".next/types/**/*.ts"
+    "../dist/frontend/.next/types/**/*.ts"
   ],
   "exclude": [
     "out-tsc",
