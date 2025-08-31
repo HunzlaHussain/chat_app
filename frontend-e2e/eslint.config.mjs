@@ -9,4 +9,11 @@ export default [
     // Override or add rules here
     rules: {},
   },
+  {
+    ignores: [
+      'out-tsc/**/*',
+      'dist/**/*',
+      '**/*.d.ts'
+    ],
+  },
 ];

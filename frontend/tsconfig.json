@@ -53,7 +53,10 @@
     ".next",
     "eslint.config.js",
     "eslint.config.cjs",
-    "eslint.config.mjs"
+    "eslint.config.mjs",
+    "../dist/**/*",
+    "**/dist/**/*",
+    "**/frontend/.next/types/**/*.ts"
   ]
 }
 //
