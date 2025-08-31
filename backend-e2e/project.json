@@ -1,0 +1,38 @@
+{
+  "name": "@chat-app/backend-e2e",
+  "projectType": "application",
+  "sourceRoot": "backend-e2e/src",
+  "targets": {
+    "e2e": {
+      "executor": "@nx/jest:jest",
+      "outputs": [
+        "{projectRoot}/test-output/jest/coverage"
+      ],
+      "options": {
+        "jestConfig": "backend-e2e/jest.config.ts",
+        "passWithNoTests": true
+      },
+      "dependsOn": [
+        "@chat-app/backend:build",
+        "@chat-app/backend:serve"
+      ]
+    },
+    "lint": {
+      "executor": "@nx/eslint:lint",
+      "options": {
+        "lintFilePatterns": ["backend-e2e/**/*.{ts,tsx,js,jsx}"]
+      }
+    },
+    "typecheck": {
+      "executor": "@nx/js:tsc",
+      "outputs": ["{options.outDir}"],
+      "options": {
+        "tsConfig": "backend-e2e/tsconfig.json",
+        "outDir": "dist/backend-e2e",
+        "main": "backend-e2e/src/index.ts",
+        "outputPath": "dist/backend-e2e"
+      }
+    }
+  },
+  "tags": []
+}

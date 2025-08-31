@@ -1,0 +1,31 @@
+{
+  "name": "@chat-app/frontend-e2e",
+  "projectType": "application",
+  "sourceRoot": "frontend-e2e/src",
+  "targets": {
+    "e2e": {
+      "executor": "@nx/playwright:playwright",
+      "outputs": ["{options.reportPath}"],
+      "options": {
+        "config": "frontend-e2e/playwright.config.ts"
+      }
+    },
+    "lint": {
+      "executor": "@nx/eslint:lint",
+      "options": {
+        "lintFilePatterns": ["frontend-e2e/**/*.{ts,tsx,js,jsx}"]
+      }
+    },
+    "typecheck": {
+      "executor": "@nx/js:tsc",
+      "outputs": ["{options.outDir}"],
+      "options": {
+        "tsConfig": "frontend-e2e/tsconfig.json",
+        "outDir": "dist/frontend-e2e",
+        "main": "frontend-e2e/src/index.ts",
+        "outputPath": "dist/frontend-e2e"
+      }
+    }
+  },
+  "tags": []
+}

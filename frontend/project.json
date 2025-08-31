@@ -1,5 +1,5 @@
 {
-  "name": "frontend",
+  "name": "@chat-app/frontend",
   "projectType": "application",
   "sourceRoot": "frontend/src",
   "targets": {
