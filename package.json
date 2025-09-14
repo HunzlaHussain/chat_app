@@ -1,0 +1,24 @@
+{
+  "name": "chat-app-monorepo",
+  "version": "1.0.0",
+  "description": "A Lerna monorepo for chat application with Next.js frontend and Node.js backend",
+  "private": true,
+  "workspaces": [
+    "packages/*"
+  ],
+  "scripts": {
+    "bootstrap": "lerna bootstrap",
+    "clean": "lerna clean",
+    "build": "lerna run build",
+    "dev": "lerna run dev --parallel",
+    "test": "lerna run test",
+    "lint": "lerna run lint",
+    "frontend:dev": "cd packages/frontend && npm run dev",
+    "backend:dev": "cd packages/backend && npm run dev",
+    "frontend:build": "cd packages/frontend && npm run build",
+    "backend:build": "cd packages/backend && npm run build"
+  },
+  "devDependencies": {
+    "lerna": "^8.0.0"
+  }
+}
